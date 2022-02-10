@@ -6,7 +6,7 @@
 
 /* navigation */
 .navbar {
-    display: inline-flex;
+    display: flex;
     justify-content: space-between;
     background-color: #fff;
     padding: 1rem;
@@ -17,7 +17,7 @@
 
 ul,
 li {
-    display: inline-flex;
+    display: flex;
     text-decoration: none;
     margin: auto;
 }
@@ -40,7 +40,8 @@ ul {
     background-color: #deb887;
     color: #fff;
 }
-.active-link{
+
+.active-link {
     color: #fff;
 }
 
@@ -155,6 +156,7 @@ ul {
 .mid {
     background-color: #fff;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding: 5% 4%;
 }
@@ -530,79 +532,114 @@ ul {
 
 
 /* media query  */
+@media only screen and (max-width:600px) {
+    .navbar {
+        position: static;
+        justify-content: flex-start;
+        width: 100%;
+    }
 
-@media(max-width:800px) {
-
-    /* navigation */
-    .nav-link,
-    .dropdown .link,
-    .sub-link {
-        font-size: 0.8rem;
+    ul,
+    li {
+        flex-direction: column;
     }
 
     ul {
-        margin-right: 0.2rem;
+        margin: 0;
     }
 
-    .logo {
-        height: 30px;
-        width: 100px;
-    }
-
-    /* intro  */
     .intro {
-        width: 100%;
         background-size: cover;
+        padding: 6% 0 4% 0;
     }
 
     .intro-heading {
-        font-size: 3rem;
+        font-size: 2rem;
     }
 
     .intro-info {
         font-size: 0.8rem;
     }
 
-    .reserv {
-        padding: 10px 0;
-        font-size: 0.8rem;
-    }
-
-    .reserv a {
-        padding: 2px 25px;
-    }
-
-    /* story section  */
-
-    .mid {
-        display: block;
-        padding: 5% 4%;
+    .mid .img {
+        width: 90%;
+        margin-inline: auto;
     }
 
     .story-img {
-        margin: 0 15% 4% 15%;
+        width: 100%
     }
 
     .story {
         width: 100%;
         text-align: center;
-    }
-
-    .story-heading {
-        font-size: 1.5rem;
+        font-size: 2rem;
+        margin-top: 2rem;
     }
 
     .story-p {
         font-size: 0.8rem;
     }
 
-    /* quote */
-    .quote {
-        font-size: 2rem;
+    .reserv {
+        font-size: 0.8rem;
+        padding: 0.5rem 1rem;
+        border: 2px solid burlywood;
+        margin-top: 1.5rem;
     }
 
-    .quote-credit {
-        padding-left: 25rem;
-        font-size: 1rem;
+    .reserv a {
+        padding: 0;
     }
+    .menu-items {
+        padding: 0;
+    }
+    .item-heading{
+        font-size: 1.2rem;
+        padding: 2rem 1rem 1rem 1rem;
+    }
+    .item-passege{
+        font-size: 0.7rem;
+        margin: 0rem 2rem 0.5rem 1rem;
+        padding-bottom: 1.5rem;
+    }
+    .gallery-img{
+        width: 80%;
+        height: 80%;
+    }
+
+    .contact-info {
+        display: none;
+    }
+
+    .footer {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        padding: 0;
+        margin-inline: auto;
+    }
+
+    .footer-elements {
+        width: 90%;
+        margin: 1rem 2rem;
+    }
+
+    .copy-right {
+        position: static;
+        padding: 2rem;
+    }
+
+    .footer-heading {
+        width: 80%;
+    }
+
+    .email {
+        width: 80%;
+    }
+
+    .subscribe {
+        width: 80%;
+    }
+
 }
