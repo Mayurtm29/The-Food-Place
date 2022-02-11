@@ -51,6 +51,7 @@ ul {
 }
 
 .dropdown {
+
     position: relative;
     border-radius: 3px;
 
@@ -69,7 +70,6 @@ ul {
     position: absolute;
     width: calc(100% + 3rem);
     background-color: #fff;
-
 }
 
 .sub-link {
@@ -97,7 +97,12 @@ ul {
     padding: 0px;
     margin: 0;
 }
-
+#nav-toggle {
+    display: none;
+}
+.nav-toggle-label{
+    display: none;
+}
 
 /* intro  */
 
@@ -535,7 +540,7 @@ ul {
 @media only screen and (max-width:600px) {
     .navbar {
         position: static;
-        justify-content: flex-start;
+        justify-content: center;
         width: 100%;
     }
 
@@ -544,8 +549,44 @@ ul {
         flex-direction: column;
     }
 
-    ul {
+    .navbar ul {
+        display: none;
+        background-color: #fff;
+        position: absolute;
+        top: 8%;
+        left: 0;
+        padding: 1rem 2rem;
         margin: 0;
+        text-align: center;
+    }
+    .dropdown-menu {
+        width: calc(100%+1rem);
+        z-index: 1;
+    }
+
+    #nav-toggle {
+        display: none;
+    }
+
+    #nav-toggle:checked~ul {
+        display: block;
+    }
+
+    .nav-toggle-label {
+        display: block;
+        position: absolute;
+        top: 3%;
+        left: 0;
+        margin-left: 0.8rem;
+    }
+
+    .nav-toggle-label .fas {
+        font-size: 1.5rem;
+    }
+
+    .logo {
+        height: 30px;
+        width: 120px;
     }
 
     .intro {
@@ -554,11 +595,21 @@ ul {
     }
 
     .intro-heading {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     .intro-info {
+        font-size: 0.7rem;
+        padding: 0 2rem;
+    }
+
+    .heading {
+        font-size: 1.25rem;
+    }
+
+    .subheading {
         font-size: 0.8rem;
+        padding: 0 1.5rem;
     }
 
     .mid .img {
@@ -566,8 +617,13 @@ ul {
         margin-inline: auto;
     }
 
+    .story-heading {
+        font-size: 1.5rem;
+        padding: 0.5rem 1rem;
+    }
+
     .story-img {
-        width: 100%
+        width: 100%;
     }
 
     .story {
@@ -579,10 +635,11 @@ ul {
 
     .story-p {
         font-size: 0.8rem;
+        padding: 0.5rem 0.6rem;
     }
 
     .reserv {
-        font-size: 0.8rem;
+        font-size: 0.7rem;
         padding: 0.5rem 1rem;
         border: 2px solid burlywood;
         margin-top: 1.5rem;
@@ -591,25 +648,69 @@ ul {
     .reserv a {
         padding: 0;
     }
+
+    .quote-section {
+        height: 12rem;
+    }
+
+    .quote {
+        font-size: 1.4rem;
+        padding: 2rem 1rem;
+    }
+
+    .quote-credit {
+        font-size: 0.8rem;
+        padding-left: 12rem;
+        margin-bottom: 2rem;
+    }
+
     .menu-items {
         padding: 0;
     }
-    .item-heading{
+
+    .item-heading {
         font-size: 1.2rem;
         padding: 2rem 1rem 1rem 1rem;
     }
-    .item-passege{
+
+    .item-passege {
         font-size: 0.7rem;
         margin: 0rem 2rem 0.5rem 1rem;
         padding-bottom: 1.5rem;
     }
-    .gallery-img{
+
+    .gallery {
+        padding: 0;
+    }
+
+    .gallery-img {
         width: 80%;
         height: 80%;
     }
 
+    #customer-section {
+        padding: 2rem;
+    }
+
+    .customer-name {
+        font-size: 1.3rem;
+    }
+
+    .customer-subheading {
+        font-size: 0.8rem;
+    }
+
+    .customer-review {
+        font-size: 0.8rem;
+        padding: 0 0.8rem;
+    }
+
     .contact-info {
         display: none;
+    }
+
+    .customer-img {
+        width: 25%;
     }
 
     .footer {
@@ -622,24 +723,38 @@ ul {
 
     .footer-elements {
         width: 90%;
-        margin: 1rem 2rem;
+        margin: 1.5rem;
     }
 
     .copy-right {
         position: static;
         padding: 2rem;
+        font-size: 0.8rem;
     }
 
     .footer-heading {
+        font-size: 1.1rem;
         width: 80%;
     }
 
     .email {
-        width: 80%;
+        width: 70%;
+        padding: 0.5rem;
+
     }
 
     .subscribe {
-        width: 80%;
+        width: 70%;
+        padding: 0.5rem;
+
+    }
+
+    .social {
+        margin-top: 1rem;
+    }
+
+    .social a {
+        font-size: 1.5rem;
     }
 
 }
