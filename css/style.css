@@ -128,7 +128,9 @@ ul {
     margin-top: 1.6rem;
     font-size: 1.1rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    box-sizing: border-box;
+    margin-inline: auto;
+    inline-size: 550px;
+    line-height: 28px;
 }
 
 .reserv {
@@ -672,9 +674,11 @@ ul {
         padding-left: 12rem;
         margin-bottom: 2rem;
     }
-    .menu-nav{
+
+    .menu-nav {
         width: 100%;
     }
+
     .menu-items {
         padding: 0;
     }
