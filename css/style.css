@@ -672,7 +672,9 @@ ul {
         padding-left: 12rem;
         margin-bottom: 2rem;
     }
-
+    .menu-nav{
+        width: 100%;
+    }
     .menu-items {
         padding: 0;
     }
