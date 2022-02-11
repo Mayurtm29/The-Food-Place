@@ -97,10 +97,12 @@ ul {
     padding: 0px;
     margin: 0;
 }
+
 #nav-toggle {
     display: none;
 }
-.nav-toggle-label{
+
+.nav-toggle-label {
     display: none;
 }
 
@@ -255,7 +257,12 @@ ul {
 }
 
 .menu-nav {
-    width: 100%;
+    width: 40%;
+    margin-inline: auto;
+}
+
+.menu-nav ul {
+    margin-inline: auto;
 }
 
 .menu-border {
@@ -263,6 +270,7 @@ ul {
     border-radius: 4px;
     padding: 0 2.5rem;
     margin: auto;
+    margin-inline: auto;
 
 }
 
@@ -559,6 +567,7 @@ ul {
         margin: 0;
         text-align: center;
     }
+
     .dropdown-menu {
         width: calc(100%+1rem);
         z-index: 1;
